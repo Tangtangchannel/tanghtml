@@ -3,28 +3,40 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>TangSS-做实用的网站！</title>
+	<title>tangstudio网址导航</title>
 	<style type="text/css">
-		.box {
-			text-align: center;
-		}
-
 		.mytest dt {
 			float: left;
 			width: 100px;
 		}
 
-		body {
-			background-image: url(img/1.jpg);
-			margin: auto;
+		.box {
+			text-align: center;
 		}
-
-
-
 
 		a {
 			font-family: "微软雅黑";
-			color: #39c5bb;
+			font-size: 20px;
+			color: #b30000;
+		}
+
+		@media (max-width: 800px) {
+			body {
+				background: url(img/1.jpg) no-repeat;
+				/*或者更换壁纸*/
+				background-size: cover;
+				margin: auto;
+			}
+
+		}
+
+		@media (min-width: 800px) {
+			body {
+				background: url(img/1.jpg) no-repeat;
+				background-size: cover;
+				margin: auto;
+			}
+
 		}
 	</style>
 </head>
