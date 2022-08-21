@@ -1,49 +1,223 @@
 <!DOCTYPE html>
+
 <html>
 
+
+
 <head>
-	<meta charset="utf-8">
-	<title>tangstudio</title>
-	<script>
-		alert("梦梦快来修BUG！")
-	</script>
-	<link href="css\Cancanneed.css" rel="stylesheet" type="text/css" />
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
 </head>
 
+<style>
+    * {
+
+        margin: 0;
+
+        padding: 0;
+
+        box-sizing: border-box;
+
+        /* Sans-serif是专指西文中没有衬线的字体 这里先不改变字体*/
+
+        font-family: "webfont", sans-serif;
+
+    }
+
+
+
+    body {
+
+        background: #000;
+
+        min-height: 200vh;
+
+    }
+
+
+
+    header {
+
+        position: fixed;
+
+        top: 0;
+
+        left: 0;
+
+        width: 100%;
+
+        display: flex;
+
+        justify-content: space-between;
+
+        align-items: center;
+
+        transition: 0.6s;
+
+        padding: 40px 100px;
+
+        z-index: 100000;
+
+    }
+
+    header.sticky {
+
+        padding: 5px 100px;
+
+        background: #fff;
+
+
+
+    }
+
+
+
+    /* 注意.logo前的空格 */
+
+    header .logo {
+
+        position: relative;
+
+        font-weight: 700;
+
+        color: #fff;
+
+        text-decoration: none;
+
+        font-size: 2em;
+
+        text-transform: uppercase;
+
+        letter-spacing: 2px;
+
+        transition: 0.6s;
+
+    }
+
+
+
+    header ul {
+
+        position: relative;
+
+        display: flex;
+
+        justify-content: center;
+
+        align-items: center;
+
+    }
+
+
+
+    header ul li {
+
+        position: relative;
+
+        list-style: none;
+
+    }
+
+
+
+    header ul li a {
+
+        position: relative;
+
+        margin: 0 15px;
+
+        text-decoration: none;
+
+        color: #fff;
+
+        letter-spacing: 2px;
+
+        font-weight: 500px;
+
+        transition: 0.6s;
+
+    }
+
+
+
+    .banner {
+
+        position: relative;
+
+        width: 100%;
+
+        height: 100vh;
+
+        background: url(./img/1.jpg);
+
+        background-size: cover;
+
+    }
+
+    header.sticky .logo,
+
+    header.sticky ul li a {
+
+        color: #000;
+
+    }
+</style>
+
+
+
 <body>
-	<div class="top">
-		<ul>
-			<li><img src="img/logo.png" width="200" height="50" alt="" /></li>
-			<li><a>Docs</a>
-				<ul>
-					<li><a href="https://www.baidu.com">教程库</a></li>
-				</ul>
-			</li>
-			<li><a href="#">资源站</a>
-				<ul><a href="https://tangtangpan.lm379.cn/">糖糖の云盘</a></ul>
-				<ul><a href="http://angelacool.eu.org:666/">Coolの藏宝阁</a></ul>
-				<ul><a href="https://miui.wtututu.top/">TUTU的搞机资源站</a></ul>
-			</li>
-			<li><a href="#">Null</a></li>
-			<li><a href="call.html">联系我们</a></li>
-			<li>
-				<a>关于</a>
-				<ul>
-					<li><a href="#">关于网站</a></li>
-					<li><a href="#">致谢</a></li>
-					<li><a href="aboutopensource.html">关于网站开源</a></li>
-				</ul>
-			</li>
-		</ul>
-	</div>
-	<div class="cancanneed">
-											
-	</div>
-	<p>我是还在成长中的tangtang！希望这个网站能跟随我一同进步！</p>
-	<div class="dibu">
-		<p> 这个网站是开源的，<a style="color: blue;" href="https://github.com/Tangtangchannel/tanghtml">改进这个页面</a>。
-		</p>
-	</div>
+
+    <header>
+
+        <a href="#" class="logo">LOGO</a>
+
+        <ul>
+
+            <li><a href="#">HOME</a></li>
+
+            <li><a href="#">About</a></li>
+
+            <li><a href="#">Services</a></li>
+
+            <li><a href="#">Portfolio</a></li>
+
+            <li><a href="#">Team</a></li>
+
+            <li><a href="#">Contact</a></li>
+
+        </ul>
+
+    </header>
+
+    <section class="banner"></section>
+
+    <script type="text/javascript">
+
+        /*addEventListener() 方法用于向指定元素添加事件句柄。 https://www.runoob.com/jsref/met-element-addeventlistener.html */
+
+        window.addEventListener("scroll", function () {
+
+            /*  询问转换器 https://www.runoob.com/jsref/met-document-queryselector.html */
+
+            var header = document.querySelector("header");
+
+            /*  toggle切换 https://www.w3school.com.cn/jquery/effect_toggle.asp */
+
+            /*如果文档没有向上或向下滚动，则scrollY为0 https://www.w3cschool.cn/fetch_api/fetch_api-bs832t0p.html */
+
+            header.classList.toggle("sticky", window.scrollY > 0);
+
+        })
+
+    </script>
+
 </body>
+
+
 
 </html>
